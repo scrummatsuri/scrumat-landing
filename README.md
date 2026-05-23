@@ -27,7 +27,7 @@ Keynote スピーカーの情報は、Astro コンポーネント内のデータ
 ### 3. スポンサーの変更
 スポンサーのロゴ情報は、プラン（Platinum, Gold, Silver, Bronze, 個人）ごとにコンポーネント内で管理されています。
 スポンサーの追加・変更を行う場合は、以下のファイルの先頭にある `sponsors` 配列を編集してください。
-- **対象ファイル:** `src/components/logos.astro`
+- **対象ファイル:** `src/components/sponsors.astro`
 
 ### 4. サイト基本情報（SEO・OGP）の変更
 サイトのタイトル、説明文、SNS共有時の画像（OGP）などを実際のイベントに合わせて変更してください。
