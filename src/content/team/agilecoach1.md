@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 name: "ダミー 委員長"
 title: "実行委員長 / アジャイルコーチ"
 avatar: {
