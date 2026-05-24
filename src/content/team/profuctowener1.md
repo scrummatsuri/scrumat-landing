@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 name: "ダミー 広報"
 title: "広報担当 / プロダクトオーナー"
 avatar: {
