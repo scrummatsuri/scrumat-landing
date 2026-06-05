@@ -12,23 +12,6 @@ const getImage = (filename: string) => {
 
 // 各画像を取得（存在しない場合は undefined）
 const logoImg = getImage("logo.png");
-const keynoteImg = getImage("DSC04525_1024_moriyuya.jpg");
-
-const platImg = getImage("スクリーンショット 2025-07-08 19.57.32.png");
-const goldImg = getImage("agileeffect_logo_Gold.png");
-const silver1Img = getImage("alleyoop-logo_Silver.png");
-const silver2Img = getImage("muga-icon.jpg");
-const silver3Img = getImage("servantworks_logo_h_Silver.png");
-const bronze1Img = getImage("yamaneco_pink_regular_Bronze.png");
-const bronze2Img = getImage("attractor.png");
-const bronze3Img = getImage("テクノプロジェクト_ロゴ_mini.png");
-const bronze4Img = getImage("JEI.png");
-
-const indiv1Img = getImage("緋gumer _庄司さま_個人2_edited_edited_edited_ed.png");
-const indiv2Img = getImage("logo_kimura.png");
-const indiv3Img = getImage("Balls.png");
-
-const contactImg = getImage("image.png");
 
 // スクラム祭り2025 ランディングページログ用コンポーネント
 ---
@@ -61,7 +44,6 @@ const contactImg = getImage("image.png");
       <p class="text-xl md:text-2xl font-bold text-blue-900 mb-2">10/3(金) 〜 10/4 (土)</p>
       <p class="text-md md:text-lg text-blue-900 mb-2 font-medium">オンライン開催+全国各地のオンサイト会場</p>
       <p class="text-md md:text-lg text-red-600 font-bold mb-8">10/4 (土) はXP祭りと同時開催！！</p>
-      <a href="#about" class="inline-block bg-white text-blue-600 font-bold py-3 px-10 rounded-full shadow hover:bg-gray-50 transition">開催趣意書</a>
     </div>
   </section>
 
@@ -98,7 +80,6 @@ const contactImg = getImage("image.png");
         <p class="text-xl text-gray-700 font-bold">9:30-17:10</p>
       </div>
     </div>
-    <a href="#" class="inline-block bg-blue-900 text-white font-bold py-3 px-10 rounded-full shadow hover:bg-blue-800 transition">SCHEDULED</a>
   </section>
 
   <!-- 4. KEYNOTE SPEAKER -->
@@ -107,13 +88,6 @@ const contactImg = getImage("image.png");
       <span class="text-blue-500 pr-1">/</span> KEYNOTE SPEAKER
     </h2>
     <div class="flex flex-col md:flex-row gap-8 items-center md:items-start bg-white/50 p-8 rounded-xl shadow-sm">
-      <div class="w-48 h-48 bg-gray-300 rounded-full flex-shrink-0 flex items-center justify-center shadow-inner overflow-hidden">
-        {keynoteImg ? (
-          <Image src={keynoteImg} alt="森 雄哉" class="w-full h-full object-cover" />
-        ) : (
-          <span class="text-gray-500 text-xs text-center">DSC04525_1024<br>moriyuya.jpg</span>
-        )}
-      </div>
       <div>
         <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-900">森 雄哉 Mori Yuya</h3>
         <p class="leading-relaxed text-gray-800 font-medium">
@@ -125,14 +99,14 @@ const contactImg = getImage("image.png");
   </section>
 
   <!-- 5. PROPOSALS -->
-  <section id="proposals" class="bg-blue-300 py-12 md:py-20 px-4 md:px-8">
+  <section id="proposals" class="bg-gray-300 py-12 md:py-20 px-4 md:px-8">
     <div class="max-w-5xl mx-auto flex flex-col items-center">
       <div class="w-full">
-        <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-8 uppercase">
-          <span class="text-blue-500 pr-1">/</span> PROPOSALS
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-500 mb-8 uppercase">
+          <span class="text-gray-400 pr-1">/</span> PROPOSALS
         </h2>
       </div>
-      <div class="text-center mb-8 text-blue-900 text-lg font-bold space-y-2">
+      <div class="text-center mb-8 text-gray-500 text-lg font-bold space-y-2">
         <p>セッション公募とレビューの締切: 2025/08/08(金)</p>
         <p>スケジュール確定および採択結果のご連絡: 2025年8月19日</p>
       </div>
@@ -149,7 +123,7 @@ const contactImg = getImage("image.png");
         </h2>
       </div>
       <p class="mb-8 text-gray-800 text-lg text-center font-bold">オンライン参加の場合、以下のリンクのconnpassページから参加を申し込みください</p>
-      <a href="#" class="inline-block bg-blue-900 text-white font-bold py-3 px-10 rounded-full shadow hover:bg-blue-800 transition mb-6">オンライン参加</a>
+      <span class="inline-block bg-gray-400 text-white font-bold py-3 px-10 rounded-full shadow cursor-not-allowed mb-6">オンライン参加(終了しました！)</span>
       <p class="text-md text-gray-800 font-bold text-center">現地参加をご希望の場合は、各サテライト会場の申し込みをしてください</p>
     </div>
   </section>
@@ -163,7 +137,7 @@ const contactImg = getImage("image.png");
         </h2>
       </div>
       <p class="mb-8 text-gray-800 text-lg font-bold">スポンサー募集は終了しました！</p>
-      <a href="#" class="inline-block bg-white text-blue-600 font-bold py-3 px-10 rounded-full shadow hover:bg-gray-50 transition">募集要項</a>
+      <span class="inline-block bg-gray-300 text-gray-600 font-bold py-3 px-10 rounded-full shadow cursor-not-allowed">募集要項(終了しました！)</span>
     </div>
     
     <!-- ロゴエリア（白背景のコンテナ） -->
@@ -172,51 +146,42 @@ const contactImg = getImage("image.png");
         <!-- Platinum Sponsor -->
         <div class="flex flex-col items-center">
           <h3 class="text-2xl font-bold text-gray-700 mb-8">Platinum Sponsor</h3>
-          <div class="flex flex-wrap justify-center gap-6">
-            {platImg ? (
-              <Image src={platImg} alt="Platinum Sponsor" class="w-64 h-32 object-contain" />
-            ) : (
-              <div class="w-64 h-32 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-xs font-medium text-center">スクリーンショット<br>2025-07-08 19.57.32.png</div>
-            )}
+          <div class="flex flex-wrap justify-center gap-6 text-xl font-bold text-gray-800">
+            <p>三菱電機株式会社</p>
           </div>
         </div>
         <!-- Gold Sponsor -->
         <div class="flex flex-col items-center">
           <h3 class="text-xl font-bold text-gray-700 mb-6">Gold Sponsor</h3>
-          <div class="flex flex-wrap justify-center gap-6">
-            {goldImg ? (
-              <Image src={goldImg} alt="Gold Sponsor" class="w-48 h-24 object-contain" />
-            ) : (
-              <div class="w-48 h-24 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-xs font-medium text-center">agileeffect_logo_Gold.png</div>
-            )}
+          <div class="flex flex-wrap justify-center gap-6 text-lg font-bold text-gray-800">
+            <p>Agile Effect</p>
           </div>
         </div>
         <!-- Silver Sponsor -->
         <div class="flex flex-col items-center">
           <h3 class="text-lg font-bold text-gray-700 mb-6">Silver Sponsor</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            {silver1Img ? <Image src={silver1Img} alt="Silver Sponsor 1" class="w-32 h-16 object-contain" /> : <div class="w-32 h-16 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-xs font-medium text-center px-1">alleyoop-logo_Silver.png</div>}
-            {silver2Img ? <Image src={silver2Img} alt="Silver Sponsor 2" class="w-32 h-16 object-contain" /> : <div class="w-32 h-16 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-xs font-medium text-center px-1">muga-icon.jpg</div>}
-            {silver3Img ? <Image src={silver3Img} alt="Silver Sponsor 3" class="w-32 h-16 object-contain" /> : <div class="w-32 h-16 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-xs font-medium text-center px-1">servantworks_logo_h_Silver.png</div>}
+          <div class="flex flex-wrap justify-center gap-6 text-base font-bold text-gray-800">
+            <p>サーバントワークス株式会社</p>
+            <p>muga</p>
+            <p>有限会社アリウープ</p>
           </div>
         </div>
         <!-- Bronze Sponsor -->
         <div class="flex flex-col items-center">
           <h3 class="text-md font-bold text-gray-700 mb-6">Bronze Sponsor</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            {bronze1Img ? <Image src={bronze1Img} alt="Bronze Sponsor 1" class="w-24 h-12 object-contain" /> : <div class="w-24 h-12 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-[10px] font-medium text-center px-1 break-all">yamaneco_pink...png</div>}
-            {bronze2Img ? <Image src={bronze2Img} alt="Bronze Sponsor 2" class="w-24 h-12 object-contain" /> : <div class="w-24 h-12 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-[10px] font-medium text-center px-1">attractor.png</div>}
-            {bronze3Img ? <Image src={bronze3Img} alt="Bronze Sponsor 3" class="w-24 h-12 object-contain" /> : <div class="w-24 h-12 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-[10px] font-medium text-center px-1 break-all">テクノプロジェクト...png</div>}
-            {bronze4Img ? <Image src={bronze4Img} alt="Bronze Sponsor 4" class="w-24 h-12 object-contain" /> : <div class="w-24 h-12 bg-gray-200 flex items-center justify-center rounded-md text-gray-500 text-[10px] font-medium text-center px-1">JEI.png</div>}
+          <div class="flex flex-wrap justify-center gap-6 text-base font-bold text-gray-800">
+            <p>合同会社JEI</p>
+            <p>株式会社アトラクタ</p>
+            <p>yamaneco</p>
+            <p>株式会社テクノプロジェクト</p>
           </div>
         </div>
         <!-- 個人 Sponsor -->
         <div class="flex flex-col items-center">
           <h3 class="text-md font-bold text-gray-700 mb-6">個人Sponsor</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            {indiv1Img ? <Image src={indiv1Img} alt="個人 Sponsor 1" class="w-16 h-16 rounded-full object-cover shadow-sm bg-gray-100" /> : <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-[10px] font-medium text-center p-1 break-all">緋gumer_庄司...</div>}
-            {indiv2Img ? <Image src={indiv2Img} alt="個人 Sponsor 2" class="w-16 h-16 rounded-full object-cover shadow-sm bg-gray-100" /> : <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-[10px] font-medium text-center p-1 break-all">logo_kimura.png</div>}
-            {indiv3Img ? <Image src={indiv3Img} alt="個人 Sponsor 3" class="w-16 h-16 rounded-full object-cover shadow-sm bg-gray-100" /> : <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-[10px] font-medium text-center p-1 break-all">Balls</div>}
+          <div class="flex flex-wrap justify-center gap-6 text-base font-bold text-gray-800">
+            <p>Shigeki Shoji</p>
+            <p>キムラ</p>
           </div>
         </div>
       </div>
@@ -240,11 +205,6 @@ const contactImg = getImage("image.png");
         <span class="text-blue-500 pr-1">/</span> CONTACT
       </h2>
     </div>
-    {contactImg ? (
-      <Image src={contactImg} alt="Contact" class="w-32 h-32 object-contain mb-6" />
-    ) : (
-      <div class="w-32 h-32 bg-gray-300 rounded-md mb-6 flex items-center justify-center text-sm text-gray-500 shadow-sm">image.png</div>
-    )}
     <a href="mailto:scrummatsuri@googlegroups.com" class="text-blue-600 hover:text-blue-800 hover:underline text-lg md:text-xl font-bold transition mb-8">mail:scrummatsuri(at)googlegroups.com</a>
     <p class="text-gray-800 font-medium text-center max-w-2xl">スクラム祭りではRSGTの行動規範に準じた行動規範を適用します。</p>
   </section>
