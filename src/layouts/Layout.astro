@@ -10,11 +10,11 @@ export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const canonicalURL = new URL(Astro.url.pathname, Astro.url).toString();
 
 const resolvedImageWithDomain = new URL(
   "/scrumatog.png",
-  Astro.site
+  Astro.url
 ).toString();
 
 const { title } = Astro.props;
