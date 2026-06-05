@@ -1,6 +1,4 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
 import Feature from "@/content/communities.json";
 ---
 
@@ -16,14 +14,17 @@ import Feature from "@/content/communities.json";
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     Feature.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
+      <div class="flex flex-col items-start">
+        <h3 class="font-semibold text-xl">{item.name}</h3>
+        {item.location && (
+          <p class="text-indigo-500 font-medium text-sm mt-1">{item.location}</p>
+        )}
+        <p class="text-slate-500 mt-3 leading-relaxed">{item.description}</p>
+        {item.link && (
+          <a href={item.link} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 font-medium text-indigo-600 hover:text-indigo-800 hover:underline transition-colors">
+            詳細・参加登録 →
+          </a>
+        )}
       </div>
     ))
   }

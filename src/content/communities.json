@@ -1,7 +1,8 @@
 [
   {
-    "title": "スクフェスhogehoge",
-    "description": "hogehogeのスクフェス",
-    "icon": "bx:bxs-briefcase"
+    "name": "スクフェス祭り",
+    "location": "オンライン",
+    "description": "とりあえずオンラインで開催されるトラックです。",
+    "link": "#"
   }
 ]
