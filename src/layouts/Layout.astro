@@ -10,18 +10,18 @@ export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const canonicalURL = new URL(Astro.url.pathname, Astro.url).toString();
 
 const resolvedImageWithDomain = new URL(
   "/scrumatog.png",
-  Astro.site
+  Astro.url
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "スクラム祭り"
-  : "スクラム祭り - 超楽しいスクラムの祭典";
+  : "スクラム祭り - 地域とオンラインのスクラムの祭典";
 
 const description = "カンファレンスでは多様な参加者が集まることで様々な視点で物事を捉えることができ、多くの学びを手に入れることが可能です。 一方で、そこで得た学びを具体的な行動変容へと繋げるためには、お互いに信頼し合える少人数で安全な場も同じく重要だと感じています。";
 ---

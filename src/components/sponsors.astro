@@ -1,57 +1,29 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
-
 const sponsors = [
   {
     tier: "Platinum",
-    sizeClass: "size-24 md:size-32", // 特大
-    icons: ["simple-icons:react"],
+    item: "プラチナSample",
+    sizeClass: "w-64 h-32 md:w-80 md:h-40 text-xl md:text-2xl rounded-md",
   },
   {
     tier: "Gold",
-    sizeClass: "size-20 md:size-24", // 大
-    icons: ["simple-icons:svelte", "simple-icons:astro"],
+    item: "ゴールドSample",
+    sizeClass: "w-48 h-24 md:w-64 md:h-32 text-lg md:text-xl rounded-md",
   },
   {
     tier: "Silver",
-    sizeClass: "size-16 md:size-20", // 中
-    icons: [
-      "simple-icons:tailwindcss",
-      "simple-icons:alpinedotjs",
-      "simple-icons:vercel",
-      "simple-icons:netlify",
-    ],
+    item: "シルバーSample",
+    sizeClass: "w-36 h-16 md:w-48 md:h-24 text-base md:text-lg rounded-md",
   },
   {
     tier: "Bronze",
-    sizeClass: "size-12 md:size-16", // 小
-    icons: [
-      "simple-icons:github",
-      "simple-icons:gitlab",
-      "simple-icons:bitbucket",
-      "simple-icons:docker",
-      "simple-icons:kubernetes",
-      "simple-icons:linux",
-      "simple-icons:ubuntu",
-      "simple-icons:debian",
-    ],
+    item: "ブロンズSample",
+    sizeClass: "w-28 h-12 md:w-36 md:h-16 text-sm md:text-base rounded-md",
   },
   {
     tier: "個人",
-    sizeClass: "size-8 md:size-10", // 極小
-    icons: [
-      "simple-icons:nodedotjs",
-      "simple-icons:deno",
-      "simple-icons:bun",
-      "simple-icons:python",
-      "simple-icons:go",
-      "simple-icons:rust",
-      "simple-icons:typescript",
-      "simple-icons:javascript",
-      "simple-icons:html5",
-      "simple-icons:css3",
-    ],
+    item: "個人Sample",
+    sizeClass: "w-20 h-20 md:w-24 md:h-24 text-xs md:text-sm rounded-full",
   },
 ];
 ---
@@ -65,10 +37,10 @@ const sponsors = [
           <h3 class="text-center font-semibold text-slate-600 mb-6">
             {sponsor.tier}
           </h3>
-          <div class="flex gap-4 md:gap-10 items-center justify-center flex-wrap">
-            {sponsor.icons.map((icon) => (
-              <Icon class={sponsor.sizeClass} name={icon} />
-            ))}
+          <div class="flex gap-4 md:gap-6 items-center justify-center flex-wrap">
+            <div class={`bg-slate-100 text-slate-400 font-bold flex items-center justify-center shadow-sm border border-slate-200 ${sponsor.sizeClass}`}>
+              {sponsor.item}
+            </div>
           </div>
         </div>
       ))
