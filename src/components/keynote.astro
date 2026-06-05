@@ -1,16 +1,14 @@
 ---
+import { Image } from "astro:assets";
+import simadaImg from "../assets/simadakoji.png";
+
 const keynotes = [
   {
-    name: "ダミー 太郎",
-    role: "アジャイルコーチ / ダミー株式会社",
-    bio: "ここにKeynoteスピーカーの紹介文が入ります。アジャイルやスクラムの最前線で活躍するエキスパートとして、実践的な知見を共有します。",
-    imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
-  },
-  {
-    name: "ダミー 花子",
-    role: "プロダクトオーナー / 株式会社サンプル",
-    bio: "ここに2人目のKeynoteスピーカーの紹介文が入ります。プロダクト開発とスクラムの融合について、具体的な事例を交えて語ります。",
-    imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka",
+    name: "島田 浩二（しまだ こうじ）",
+    role: "株式会社えにしテック代表取締役",
+    url: "https://www.enishi-tech.com/",
+    bio: "1978年神奈川県生まれ。電気通信大学電気通信学部情報工学科卒。2009年に株式会社えにしテックを設立。2011年からは一般社団法人日本Rubyの会の理事も務める。近著に『シンプリシティ』（オライリージャパン、翻訳）『ソフトウェアアーキテクチャの基礎第2版』（オライリージャパン、翻訳）、『ソフトウェア設計の結合バランス』（インプレス、翻訳）、『エンジニアリング統括責任者の手引き』（オライリージャパン、翻訳）、『伝わるコードレビュー』（翔泳社、監修）、『ソフトウェアアーキテクトのための意思決定術』（インプレス、翻訳）など。",
+    image: simadaImg,
   }
 ];
 ---
@@ -21,21 +19,26 @@ const keynotes = [
       Keynote スピーカー
     </h2>
     <p class="text-lg mt-4 text-slate-600">
-      スクラムの最前線で活躍するスピーカーをお招きします。
+      今年のKeynoteスピーカーは、株式会社えにしテック代表取締役の島田浩二さんです。
     </p>
   </div>
 
-  <div class="grid sm:grid-cols-2 gap-10 mt-16 max-w-4xl mx-auto">
+  <div class="flex flex-wrap justify-center gap-10 mt-16 max-w-4xl mx-auto">
     {
       keynotes.map((speaker) => (
-        <div class="flex flex-col items-center text-center gap-4">
+        <div class="flex flex-col items-center text-center gap-4 max-w-2xl">
           <div class="w-40 h-40 rounded-full overflow-hidden bg-slate-100 shadow-md border border-slate-200">
-            <img src={speaker.imageUrl} alt={speaker.name} class="w-full h-full object-cover" />
+            <Image src={speaker.image} alt={speaker.name} class="w-full h-full object-cover" />
           </div>
           <div>
             <h3 class="font-semibold text-2xl">{speaker.name}</h3>
             <p class="text-indigo-500 font-medium mt-1">{speaker.role}</p>
-            <p class="text-slate-500 mt-4 leading-relaxed">{speaker.bio}</p>
+            {speaker.url && (
+              <a href={speaker.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 hover:underline text-sm break-all mt-1 block">
+                {speaker.url}
+              </a>
+            )}
+            <p class="text-slate-500 mt-4 leading-relaxed text-left">{speaker.bio}</p>
           </div>
         </div>
       ))
