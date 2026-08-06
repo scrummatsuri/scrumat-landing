@@ -29,8 +29,33 @@ const sponsors = [
 ---
 
 <div class="mt-24">
-  <h2 class="text-center text-slate-500">参加スポンサー</h2>
-  <div class="flex flex-col gap-16 mt-10">
+  <h2 class="text-center lg:text-5xl font-bold lg:tracking-tight">スポンサー</h2>
+  <div class="text-center mt-8 max-w-3xl mx-auto px-4">
+    <p class="text-slate-700 leading-relaxed">
+      スクラム祭りでは、イベントの趣旨にご賛同いただき、ご協賛いただけるスポンサー様を募集しております。<br
+      />
+      詳細は開催趣意書をご確認の上、ご応募いただけますと幸いです。
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-6 justify-center">
+      <a
+        href="https://forms.gle/vkfXKwQEHvq1EQSf8"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex justify-center items-center px-8 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-md transition-colors"
+      >
+        応募フォーム
+      </a>
+      <a
+        href="https://docs.google.com/presentation/d/1vfSjbwu_ewGQsmBxNxXwoWoscmdaHQmKfNK0JXSPlXQ/edit?slide=id.g2f076a46b00_0_39#slide=id.g2f076a46b00_0_39"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex justify-center items-center px-8 py-4 text-lg font-medium text-indigo-600 bg-white border-2 border-indigo-600 hover:bg-indigo-50 rounded-lg shadow-sm transition-colors"
+      >
+        開催趣意書
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col gap-16 mt-16">
     {
       sponsors.map((sponsor) => (
         <div>
