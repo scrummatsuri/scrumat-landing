@@ -1,122 +1,116 @@
 [
   {
-    "name": "盛岡トラック",
-    "location": "未定",
-    "description": "説明未入力",
-    "link": "#"
-  },
-  {
     "name": "島根トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "東京連合トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "福井トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "新潟トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場準備中",
+    "description": "テストやQA、品質のテーマ大歓迎！今回特に大切にしたいのは「初登壇者の応援」です。NINNOで皆様をお待ちしています！",
     "link": "#"
   },
   {
     "name": "大阪トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場あり",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "札幌トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "福岡トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
-    "name": "仙台トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "name": "仙台トラック(東北連合)",
+    "location": "現地会場未定",
+    "description": "盛岡トラックと合体しました。",
     "link": "#"
   },
   {
     "name": "栃木トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "鳥取トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "金沢トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "沖縄トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "鹿児島トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "神奈川トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "三島トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "奈良アジャイル",
     "location": "奈良市近郊予定",
-    "description": "昨年のスクラム祭りで爆誕したアジャイルコミュニティ。現地でワイワイやります。",
+    "description": "昨年のスクラム祭りで爆誕したアジャイルコミュニティ。各地のトラックを鑑賞しつつ、現地でワイワイやります。",
     "link": "#"
   },
   {
     "name": "塩尻トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   },
   {
     "name": "小名古屋トラック",
-    "location": "未定",
+    "location": "現地会場未定",
     "description": "大曽根トラックと名古屋トラックが合体して小名古屋トラックになりました。",
     "link": "#"
   },
   {
     "name": "横浜トラック",
-    "location": "未定",
-    "description": "説明未入力",
+    "location": "現地会場未定",
+    "description": "説明文章準備中",
     "link": "#"
   }
 ]
