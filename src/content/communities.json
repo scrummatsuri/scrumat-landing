@@ -25,15 +25,9 @@
   },
   {
     "name": "大阪トラック",
-    "location": "現地会場あり",
-    "description": "説明文章準備中",
-    "link": "#"
-  },
-  {
-    "name": "札幌トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "Sansan株式会社 関西支店",
+    "description": "スクラム祭り2026の大阪サテライト会場です。大阪サテライト会場では、大阪トラックの登壇を視聴できます！",
+    "link": "https://connpass.com/event/401877/"
   },
   {
     "name": "福岡トラック",
