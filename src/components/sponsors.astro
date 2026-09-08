@@ -1,28 +1,34 @@
 ---
+import { Image } from "astro:assets";
+// ※パスは現在のファイル位置に合わせて適宜調整してください
+import wingarchLogo from "../assets/sponsors/wingarch1st.svg";
+
 const sponsors = [
   {
     tier: "Platinum",
-    item: "受付中",
+    companies: [],
     sizeClass: "w-64 h-32 md:w-80 md:h-40 text-xl md:text-2xl rounded-md",
   },
   {
     tier: "Gold",
-    item: "受付中",
+    companies: [],
     sizeClass: "w-48 h-24 md:w-64 md:h-32 text-lg md:text-xl rounded-md",
   },
   {
     tier: "Silver",
-    item: "受付中",
+    companies: [],
     sizeClass: "w-36 h-16 md:w-48 md:h-24 text-base md:text-lg rounded-md",
   },
   {
     tier: "Bronze",
-    item: "受付中",
+    companies: [
+      { name: "ウイングアーク１ｓｔ", logo: wingarchLogo }
+    ],
     sizeClass: "w-28 h-12 md:w-36 md:h-16 text-sm md:text-base rounded-md",
   },
   {
     tier: "個人",
-    item: "受付中",
+    companies: [],
     sizeClass: "w-20 h-20 md:w-24 md:h-24 text-xs md:text-sm rounded-full",
   },
 ];
@@ -32,8 +38,7 @@ const sponsors = [
   <h2 class="text-center lg:text-5xl font-bold lg:tracking-tight">スポンサー</h2>
   <div class="text-center mt-8 max-w-3xl mx-auto px-4">
     <p class="text-slate-700 leading-relaxed">
-      スクラム祭りでは、イベントの趣旨にご賛同いただき、ご協賛いただけるスポンサー様を募集しております。<br
-      />
+      スクラム祭りでは、イベントの趣旨にご賛同いただき、ご協賛いただけるスポンサー様を募集しております。<br />
       詳細は開催趣意書をご確認の上、ご応募いただけますと幸いです。
     </p>
     <div class="mt-8 flex flex-col sm:flex-row gap-6 justify-center">
@@ -63,8 +68,16 @@ const sponsors = [
             {sponsor.tier}
           </h3>
           <div class="flex gap-4 md:gap-6 items-center justify-center flex-wrap">
+            {/* 決定したスポンサーのロゴを表示 */}
+            {sponsor.companies.map((company) => (
+              <div class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 p-2 ${sponsor.sizeClass}`}>
+                <Image src={company.logo} alt={company.name} class="w-full h-full object-contain" />
+              </div>
+            ))}
+            
+            {/* 募集中の枠（不要な場合は削除してください） */}
             <div class={`bg-slate-100 text-slate-400 font-bold flex items-center justify-center shadow-sm border border-slate-200 ${sponsor.sizeClass}`}>
-              {sponsor.item}
+              受付中
             </div>
           </div>
         </div>
