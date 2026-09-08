@@ -1,9 +1,9 @@
 [
   {
     "name": "島根トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "松江オープンソースラボ",
+    "description": "島根トラックの セッションは、 すべて 島根会場での 現地登壇！ 日々の 仕事や チームで 起きている ことを、さまざまな 視点から 考える きっかけと なる セッションです。 登壇者や 参加者同士の 交流を 通して、 それぞれの 経験や 気づきが つながる、 そんな 時間を 島根で 一緒に つくりましょう！",
+    "link": "https://agile-shimane.connpass.com/event/405119/"
   },
   {
     "name": "東京連合トラック",
@@ -36,10 +36,10 @@
     "link": "#"
   },
   {
-    "name": "東北連合トラック",
-    "location": "現地会場未定",
-    "description": "仙台トラックと盛岡トラックの共同開催",
-    "link": "#"
+    "name": "東北トラック＠仙台",
+    "location": "戦災復興記念館",
+    "description": "仙台会場では、東北内外から集まった3名のトークに加え、当日その場で発表するライトニングトークス、そして参加者みんなで語り合うOST（Open Space Technology）を予定しています。",
+    "link": "https://tohoku-agile.connpass.com/event/405828/"
   },
   {
     "name": "栃木トラック",
@@ -97,8 +97,8 @@
   },
   {
     "name": "横浜トラック",
-    "location": "調整中 (横浜市内)",
+    "location": "Serendie Street Yokohama",
     "description": "「横浜に​ゆかりが​ある​／好き」を​きっかけに​自然と​人が​集まり、​雑談や​対話から​新しい​アイデアやつながりが​生まれる。​そんな​場を​一緒に​つくりませんか？​みなさんの​参加を​お待ちしています！",
-    "link": "#"
+    "link": "https://yokohama-agile.connpass.com/event/405869/"
   }
 ]
