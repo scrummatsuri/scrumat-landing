@@ -2,7 +2,7 @@
   {
     "name": "島根トラック",
     "location": "松江オープンソースラボ",
-    "description": "島根トラックの セッションは、 すべて 島根会場での 現地登壇！ 日々の 仕事や チームで 起きている ことを、さまざまな 視点から 考える きっかけと なる セッションです。 登壇者や 参加者同士の 交流を 通して、 それぞれの 経験や 気づきが つながる、 そんな 時間を 島根で 一緒に つくりましょう！",
+    "description": "島根トラックのセッションは、 すべて島根会場での現地登壇！日々の仕事やチームで 起きていることを、さまざまな視点から考えるきっかけとなるセッションです。登壇者や参加者同士の交流を通して、それぞれの経験や気づきがつながる、そんな時間を島根で一緒につくりましょう！",
     "link": "https://agile-shimane.connpass.com/event/405119/"
   },
   {
@@ -13,15 +13,15 @@
   },
   {
     "name": "福井トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "Agile Studio Park FUKUI BASE",
+    "description": "セッションはすべてBeginner向けのものを採択しておりますので、 初めての方でも、お気軽にご参加ください。",
+    "link": "https://agile-fukui.connpass.com/event/403583/"
   },
   {
     "name": "新潟トラック",
     "location": "NINNO",
     "description": "テストやQA、品質のテーマ大歓迎！今回特に大切にしたいのは「初登壇者の応援」です。NINNOで皆様をお待ちしています！",
-    "link": "#"
+    "link": "https://ninno-tech-fest.connpass.com/event/405610/"
   },
   {
     "name": "大阪トラック",
@@ -47,11 +47,11 @@
     "description": "説明文章準備中",
     "link": "#"
   },
-  {
+ {
     "name": "鳥取トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "リコーITソリューションズ株式会社 鳥取事業所",
+    "description": "鳥取トラックではオンライン・オンサイト交えたトークに加え、鳥取ゆかりの方々での雑談の時間を設けています。初めての方もお気軽にご参加ください！",
+    "link": "https://scrum-matsuri-tottori.connpass.com/event/404506/"
   },
   {
     "name": "金沢トラック",
@@ -91,9 +91,9 @@
   },
   {
     "name": "小名古屋トラック",
-    "location": "現地会場未定",
-    "description": "大曽根トラックと名古屋トラックが合体して小名古屋トラックになりました。",
-    "link": "#"
+    "location": "CTC（伊藤忠テクノソリューションズ）名古屋オフィス",
+    "description": "名古屋アジャイル勉強会のconnpassをお借りして、「スクラム祭り2026」の小名古屋トラックを開催します。",
+    "link": "https://nagoyaagile.connpass.com/event/405716/"
   },
   {
     "name": "横浜トラック",
