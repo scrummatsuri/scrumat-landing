@@ -55,9 +55,9 @@
   },
   {
     "name": "金沢トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "近江町交流プラザ 4F 研修室1",
+    "description": "今年の金沢トラックでは初めてワークショップを開催します。もちろんトークセッションも豪華ラインナップ。期待してください。アジャイル・スクラムに関心のある方はもちろん、初めての方も歓迎です。みんなでわいわい盛り上がりましょう!",
+    "link": "https://agile-hokuriku.connpass.com/event/407327/"
   },
   {
     "name": "沖縄トラック",
@@ -73,9 +73,9 @@
   },
   {
     "name": "神奈川トラック",
-    "location": "現地会場未定",
-    "description": "説明文章準備中",
-    "link": "#"
+    "location": "SHARESPACE takeya",
+    "description": "スクラムフェス神奈川では『心に火を灯す』を合言葉に、神奈川を起点としてアジャイル/スクラムコミュニティの発展に力を入れています！",
+    "link": "https://agile-kng.connpass.com/event/406492/"
   },
   {
     "name": "三島トラック",
