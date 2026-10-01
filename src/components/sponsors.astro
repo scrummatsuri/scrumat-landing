@@ -18,14 +18,14 @@ const sponsors = [
   {
     tier: "Silver",
     companies: [
-      { name: "三菱電機", logo: mitsubishiLogo }
+      { name: "三菱電機", logo: mitsubishiLogo, url: "https://www.mitsubishielectric.co.jp/" }
     ],
     sizeClass: "w-36 h-16 md:w-48 md:h-24 text-base md:text-lg rounded-md",
   },
   {
     tier: "Bronze",
     companies: [
-      { name: "ウイングアーク１ｓｔ", logo: wingarchLogo }
+      { name: "ウイングアーク１ｓｔ", logo: wingarchLogo, url: "https://www.wingarc.com/" }
     ],
     sizeClass: "w-28 h-12 md:w-36 md:h-16 text-sm md:text-base rounded-md",
   },
@@ -73,9 +73,15 @@ const sponsors = [
           <div class="flex gap-4 md:gap-6 items-center justify-center flex-wrap">
             {/* 決定したスポンサーのロゴを表示 */}
             {sponsor.companies.map((company) => (
-              <div class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 p-2 ${sponsor.sizeClass}`}>
-                <Image src={company.logo} alt={company.name} class="w-full h-full object-contain" />
-              </div>
+              company.url ? (
+                <a href={company.url} target="_blank" rel="noopener noreferrer" class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 p-2 hover:shadow-md transition-shadow hover:-translate-y-0.5 transform duration-200 ${sponsor.sizeClass}`}>
+                  <Image src={company.logo} alt={company.name} class="w-full h-full object-contain" />
+                </a>
+              ) : (
+                <div class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 p-2 ${sponsor.sizeClass}`}>
+                  <Image src={company.logo} alt={company.name} class="w-full h-full object-contain" />
+                </div>
+              )
             ))}
             
             {/* 募集中の枠（不要な場合は削除してください） */}
