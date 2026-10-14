@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 // ※パスは現在のファイル位置に合わせて適宜調整してください
 import wingarchLogo from "../assets/sponsors/wingarch1st.svg";
 import mitsubishiLogo from "../assets/sponsors/mitsubishi.png";
+import kagLogo from "../assets/sponsors/kag.png";
 
 const sponsors = [
   {
@@ -18,14 +19,15 @@ const sponsors = [
   {
     tier: "Silver",
     companies: [
-      { name: "三菱電機", logo: mitsubishiLogo, url: "https://www.mitsubishielectric.co.jp/" }
+      { name: "三菱電機", logo: mitsubishiLogo, url: "https://www.mitsubishielectric.co.jp/" },
     ],
     sizeClass: "w-36 h-16 md:w-48 md:h-24 text-base md:text-lg rounded-md",
   },
   {
     tier: "Bronze",
     companies: [
-      { name: "ウイングアーク１ｓｔ", logo: wingarchLogo, url: "https://www.wingarc.com/" }
+      { name: "ウイングアーク１ｓｔ", logo: wingarchLogo, url: "https://www.wingarc.com/" },
+      { name: "KAG", logo: kagLogo, url: "https://kddi-agile.com" }
     ],
     sizeClass: "w-28 h-12 md:w-36 md:h-16 text-sm md:text-base rounded-md",
   },
