@@ -14,9 +14,9 @@ import Feature from "@/content/communities.json";
           <p class="text-indigo-500 font-medium text-sm mt-1">{item.location}</p>
         )}
         <p class="text-slate-500 mt-3 leading-relaxed">{item.description}</p>
-        {item.link && (
+        {item.link && item.link !== "#" && (
           <a href={item.link} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 font-medium text-indigo-600 hover:text-indigo-800 hover:underline transition-colors">
-            詳細・参加登録 →
+            詳細を見る →
           </a>
         )}
       </div>
