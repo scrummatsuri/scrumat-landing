@@ -1,0 +1,333 @@
+---
+import { Image, Picture } from "astro:assets";
+import Container from "@/components/container.astro";
+import scrumAt from "@/assets/scrumat.jpg";
+import simadaImg from "@/assets/simadakoji.png";
+
+// スクラム祭り2026 ランディングページアーカイブ用コンポーネント
+
+const keynotes = [
+  {
+    name: "島田 浩二（しまだ こうじ）",
+    role: "株式会社えにしテック代表取締役",
+    url: "https://www.enishi-tech.com/",
+    bio: "1978年神奈川県生まれ。電気通信大学電気通信学部情報工学科卒。2009年に株式会社えにしテックを設立。2011年からは一般社団法人日本Rubyの会の理事も務める。近著に『シンプリシティ』（オライリージャパン、翻訳）『ソフトウェアアーキテクチャの基礎第2版』（オライリージャパン、翻訳）、『ソフトウェア設計の結合バランス』（インプレス、翻訳）、『エンジニアリング統括責任者の手引き』（オライリージャパン、翻訳）、『伝わるコードレビュー』（翔泳社、監修）、『ソフトウェアアーキテクトのための意思決定術』（インプレス、翻訳）など。",
+    image: simadaImg,
+  },
+];
+
+const sponsors = [
+  {
+    tier: "Silver",
+    companies: [
+      {
+        name: "三菱電機",
+        url: "https://www.mitsubishielectric.co.jp/serendie/",
+      },
+    ],
+    sizeClass: "w-36 h-16 md:w-48 md:h-24 text-base md:text-lg rounded-md",
+  },
+  {
+    tier: "Bronze",
+    companies: [
+      {
+        name: "ウイングアーク１ｓｔ",
+        url: "https://corp.wingarc.com/recruit/index.html",
+      },
+      {
+        name: "KAG",
+        url: "https://kddi-agile.com",
+      },
+    ],
+    sizeClass: "w-36 h-12 md:w-44 md:h-16 text-sm md:text-base rounded-md",
+  },
+];
+
+const communities = [
+  {
+    name: "島根トラック",
+    location: "松江オープンソースラボ",
+    description:
+      "島根トラックのセッションは、すべて島根会場での現地登壇！日々の仕事やチームで起きていることを、さまざまな視点から考えるきっかけとなるセッションです。登壇者や参加者同士の交流を通して、それぞれの経験や気づきがつながる、そんな時間を島根で一緒につくりましょう！",
+    link: "https://agile-shimane.connpass.com/event/405119/",
+  },
+  {
+    name: "東京連合トラック",
+    location: "株式会社ログラス本社",
+    description:
+      "東京でも現地に会場を作って、みんなでわいわい盛り上がりましょう！初めての方も、歓迎です！ 今までイベントに参加したことがない人も気軽にご参加ください。",
+    link: "https://shinagile.connpass.com/event/405051/",
+  },
+  {
+    name: "福井トラック",
+    location: "Agile Studio Park FUKUI BASE",
+    description:
+      "セッションはすべてBeginner向けのものを採択しておりますので、 初めての方でも、お気軽にご参加ください。",
+    link: "https://agile-fukui.connpass.com/event/403583/",
+  },
+  {
+    name: "新潟トラック",
+    location: "NINNO",
+    description:
+      "テストやQA、品質のテーマ大歓迎！今回特に大切にしたいのは「初登壇者の応援」です。NINNOで皆様をお待ちしています！",
+    link: "https://ninno-tech-fest.connpass.com/event/405610/",
+  },
+  {
+    name: "大阪トラック",
+    location: "Sansan株式会社 関西支店",
+    description:
+      "スクラム祭り2026の大阪サテライト会場です。大阪サテライト会場では、大阪トラックの登壇を視聴できます！",
+    link: "https://connpass.com/event/401877/",
+  },
+  {
+    name: "福岡トラック",
+    location: "KINTO Tecnologies",
+    description:
+      "ふくおかスクラムは、スクラムをメインに、ロール、職種、業種 を超えた交流を目指したイベントです。みんなでわいわい盛り上がりましょう！",
+    link: "https://fukuoka-scrum.connpass.com/event/408796/",
+  },
+  {
+    name: "東北トラック＠仙台",
+    location: "戦災復興記念館",
+    description:
+      "仙台会場では、東北内外から集まった3名のトークに加え、当日その場で発表するライトニングトークス、そして参加者みんなで語り合うOST（Open Space Technology）を予定しています。",
+    link: "https://tohoku-agile.connpass.com/event/405828/",
+  },
+  {
+    name: "栃木トラック",
+    location: "FURNITURE LOUNGE(ファニチャーラウンジ)",
+    description:
+      "栃木トラックでは現地会場を用意し、参加者や登壇者が交流できる場を作ろうと思っています。 ぜひ、栃木県在住の方や近隣の県の方は遊びに来てください！",
+    link: "https://agile-no-wa-tochigi.connpass.com/event/410192/",
+  },
+  {
+    name: "鳥取トラック",
+    location: "リコーITソリューションズ株式会社 鳥取事業所",
+    description:
+      "鳥取トラックではオンライン・オンサイト交えたトークに加え、鳥取ゆかりの方々での雑談の時間を設けています。初めての方もお気軽にご参加ください！",
+    link: "https://scrum-matsuri-tottori.connpass.com/event/404506/",
+  },
+  {
+    name: "金沢トラック",
+    location: "近江町交流プラザ 4F 研修室1",
+    description:
+      "今年の金沢トラックでは初めてワークショップを開催します。もちろんトークセッションも豪華ラインナップ。期待してください。アジャイル・スクラムに関心のある方はもちろん、初めての方も歓迎です。みんなでわいわい盛り上がりましょう!",
+    link: "https://agile-hokuriku.connpass.com/event/407327/",
+  },
+  {
+    name: "沖縄トラック",
+    location: "オンラインのみ",
+    description:
+      "「コミュニティ」をテーマにして、さまざまな角度からコミュニティについて語っていただきます。",
+    link: "#",
+  },
+  {
+    name: "鹿児島トラック",
+    location: "リコーITソリューションズ株式会社 鹿児島事業所",
+    description:
+      "鹿児島に集まって、セッションを一緒に楽しみ、ゆるやかにつながる時間に。アジャイル・スクラムに関心のある方はもちろん、コミュニティへの最初の一歩を踏み出したい方も！桜島もぜひ観に来てください！",
+    link: "https://kagoshima-scrum.connpass.com/event/406752/",
+  },
+  {
+    name: "神奈川トラック",
+    location: "SHARESPACE takeya",
+    description:
+      "スクラムフェス神奈川では『心に火を灯す』を合言葉に、神奈川を起点としてアジャイル/スクラムコミュニティの発展に力を入れています！",
+    link: "https://agile-kng.connpass.com/event/406492/",
+  },
+  {
+    name: "三島トラック",
+    location: "みしま未来研究所",
+    description:
+      "アジャイルの学びを共有しながら. 伊豆ならではの美味しいものを食し.三島ならではの学びと体験を参加者全員で持ち帰る場です。",
+    link: "https://agile-mishima.connpass.com/event/405253/",
+  },
+  {
+    name: "塩尻トラック",
+    location: "宿とスタジオKICHI",
+    description:
+      "長野県塩尻市のポッドキャストスタジオ付きゲストハウス「宿とスタジオKICHI」からポッドキャスト形式でゆるりとお送りします。",
+    link: "#",
+  },
+  {
+    name: "小名古屋トラック",
+    location: "CTC（伊藤忠テクノソリューションズ）名古屋オフィス",
+    description:
+      "名古屋アジャイル勉強会のconnpassをお借りして、「スクラム祭り2026」の小名古屋トラックを開催します。",
+    link: "https://nagoyaagile.connpass.com/event/405716/",
+  },
+  {
+    name: "横浜トラック",
+    location: "Serendie Street Yokohama",
+    description:
+      "「横浜に​ゆかりが​ある​／好き」を​きっかけに​自然と​人が​集まり、​雑談や​対話から​新しい​アイデアやつながりが​生まれる。​そんな​場を​一緒に​つくりませんか？​みなさんの​参加を​お待ちしています！",
+    link: "https://yokohama-agile.connpass.com/event/405869/",
+  },
+];
+---
+
+<Container>
+  <!-- 1. MainVisual -->
+  <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+    <div class="py-6 md:order-1 hidden md:block">
+      <Picture
+        src={scrumAt}
+        alt="スクラム祭り"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+      />
+    </div>
+    <div>
+      <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+        スクラム祭り2026
+      </h1>
+      <div class="mt-4 inline-block bg-indigo-50 border border-indigo-200 text-indigo-800 px-4 py-2 rounded-lg font-medium text-sm md:text-base">
+        2026年10月23日・24日の開催は終了いたしました。ご参加ありがとうございました！
+      </div>
+      <p class="text-lg mt-4 text-slate-600 max-w-xl">
+        カンファレンスでは多様な参加者が集まることで様々な視点で物事を捉えることができ、多くの学びを手に入れることが可能です。
+        一方で、そこで得た学びを具体的な行動変容へと繋げるためには、お互いに信頼し合える少人数で安全な場も同じく重要だと感じています。
+        そこで、私たちは以下を目的としたアジャイルコミュニティの祭典を「スクラム祭り」として開催します。
+      </p>
+    </div>
+  </main>
+
+  <!-- 2. Keynote -->
+  <div class="mt-16 md:mt-24 mb-16 md:mb-24">
+    <div class="text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        Keynote スピーカー
+      </h2>
+      <p class="text-lg mt-4 text-slate-600">
+        今年のKeynoteスピーカーは、株式会社えにしテック代表取締役の島田浩二さんです。
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-10 mt-16 max-w-4xl mx-auto">
+      {
+        keynotes.map((speaker) => (
+          <div class="flex flex-col items-center text-center gap-4 max-w-2xl">
+            <div class="w-40 h-40 rounded-full overflow-hidden bg-slate-100 shadow-md border border-slate-200">
+              <Image src={speaker.image} alt={speaker.name} class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-2xl">{speaker.name}</h3>
+              <p class="text-indigo-500 font-medium mt-1">{speaker.role}</p>
+              {speaker.url && (
+                <a
+                  href={speaker.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-500 hover:text-blue-700 hover:underline text-sm break-all mt-1 block">
+                  {speaker.url}
+                </a>
+              )}
+              <p class="text-slate-500 mt-4 leading-relaxed text-left">{speaker.bio}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- 3. Schedule -->
+  <div class="mt-16 md:mt-24 mb-16 md:mb-24">
+    <div class="text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">開催日時</h2>
+      <p class="text-lg mt-4 text-slate-600">本イベントは以下の2日間にわたって開催されました。</p>
+    </div>
+    <div class="max-w-2xl mx-auto mt-10">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <div class="flex-1 bg-slate-50 p-8 rounded-lg shadow-sm border border-slate-100 text-center">
+          <h3 class="text-2xl font-bold text-indigo-500">Day 1</h3>
+          <p class="text-xl text-slate-800 mt-2 font-semibold">2026/10/23</p>
+        </div>
+        <div class="flex-1 bg-slate-50 p-8 rounded-lg shadow-sm border border-slate-100 text-center">
+          <h3 class="text-2xl font-bold text-indigo-500">Day 2</h3>
+          <p class="text-xl text-slate-800 mt-2 font-semibold">2026/10/24</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. ActionLinks -->
+  <div class="mt-16 md:mt-24 mb-16 md:mb-24 bg-indigo-50/50 rounded-3xl p-8 md:p-16 text-center max-w-5xl mx-auto border border-indigo-100">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">スクラム祭り2026は終了しました</h2>
+    <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
+      多くの皆様にご参加いただき、誠にありがとうございました！
+    </p>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <span class="inline-flex justify-center items-center px-8 py-4 text-lg font-medium text-white bg-slate-400 rounded-lg cursor-not-allowed">
+        参加登録（終了しました）
+      </span>
+      <a
+        href="https://confengine.com/conferences/scrummatsuri-2026"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex justify-center items-center px-8 py-4 text-lg font-medium text-indigo-600 bg-white border-2 border-indigo-600 hover:bg-indigo-50 rounded-lg shadow-sm transition-colors">
+        プロポーザルを確認する
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Sponsors (企業ロゴはすべて文字表記に変換) -->
+  <div class="mt-24">
+    <h2 class="text-center lg:text-5xl font-bold lg:tracking-tight">スポンサー</h2>
+    <div class="flex flex-col gap-16 mt-16">
+      {
+        sponsors
+          .filter((sponsor) => sponsor.companies.length > 0)
+          .map((sponsor) => (
+            <div>
+              <h3 class="text-center font-semibold text-slate-600 mb-6">{sponsor.tier}</h3>
+              <div class="flex gap-4 md:gap-6 items-center justify-center flex-wrap">
+                {sponsor.companies.map((company) =>
+                  company.url ? (
+                    <a
+                      href={company.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 px-4 py-2 hover:shadow-md transition-shadow hover:-translate-y-0.5 transform duration-200 font-bold text-slate-800 text-center ${sponsor.sizeClass}`}>
+                      {company.name}
+                    </a>
+                  ) : (
+                    <div
+                      class={`bg-white flex items-center justify-center shadow-sm border border-slate-200 px-4 py-2 font-bold text-slate-800 text-center ${sponsor.sizeClass}`}>
+                      {company.name}
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          ))
+      }
+    </div>
+  </div>
+
+  <!-- 6. Communities -->
+  <div class="mt-24">
+    <h2 class="text-center lg:text-5xl font-bold lg:tracking-tight">参加するコミュニティ</h2>
+  </div>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {
+      communities.map((item) => (
+        <div class="flex flex-col items-start">
+          <h3 class="font-semibold text-xl">{item.name}</h3>
+          {item.location && <p class="text-indigo-500 font-medium text-sm mt-1">{item.location}</p>}
+          <p class="text-slate-500 mt-3 leading-relaxed">{item.description}</p>
+          {item.link && item.link !== "#" && (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-4 font-medium text-indigo-600 hover:text-indigo-800 hover:underline transition-colors">
+              詳細を見る →
+            </a>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</Container>
